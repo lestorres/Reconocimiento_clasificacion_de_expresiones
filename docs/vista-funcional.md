@@ -2,50 +2,53 @@
 En esta apartado se analizará la interacción de los componentes del sistema y sus funciones clave.
 
 ## 1. Entrada: Captura de Datos
-**Función**: La cámara captura imágenes de los rostros de los espectadores.
+**Función**: Capturar imágenes faciales de los espectadores.
 
-**Dispositivo**: Cámara USB (tipo UVC) conectada a la Raspberry Pi.
+**Dispositivo**: Cámara USB conectada a la Raspberry Pi.
 
-**Descripción**: Las imágenes deben ser procesadas en tiempo real para no interferir con la experiencia del espectador y la cámara debe estar posicionada discretamente para capturar solo las expresiones faciales sin invadir el espacio del espectador.
+**Descripción**: La cámara, instalada discretamente en los respaldos de los asientos, toma imágenes de los rostros en tiempo real, sin invadir la privacidad ni distraer al espectador.
 
-## 2. Preprocesamiento y Procesamiento de Imágenes
-**Función**: El sistema realiza un preprocesamiento básico de las imágenes (redimensionamiento, conversión a escala de grises, etc.) para optimizar la clasificación de emociones.
+## 2. Preprocesamiento de Imágenes
+**Función**: Preparar las imágenes para la clasificación.
 
-**Software**: OpenCV para el procesamiento inicial de imágenes.
+**Software**: OpenCV.
 
-**Descripción**: Las imágenes se preparan para la clasificación utilizando un modelo de aprendizaje automático **Edge AI**.
+**Descripción**: Se aplican transformaciones como redimensionamiento, normalización y conversión a escala de grises. Esto optimiza el rendimiento del modelo y reduce la carga de procesamiento.
 
-## 3. Clasificación de Emociones 
-**Función**: Este será el modelo de inteligencia artificial a utilizar, este ejecutará localmente en la Raspberry Pi con TensorFlow Lite y clasificará las emociones de los espectadores.
 
-**Modelo**: Se utiliza un modelo entrenado con una base de datos como FER2013, RAF-DB, o CK+.
+## 3. Clasificación de Emociones
+**Función**: Detectar la emoción del espectador en cada imagen capturada.
+
+**Modelo**: Modelo ligero de aprendizaje profundo entrenado con bases como FER2013, RAF-DB o CK+.
 
 **Emociones clasificadas**: Enojo, disgusto, miedo, felicidad, tristeza y sorpresa.
 
-**Descripción**: El modelo realiza la clasificación en menos de 2 segundos por imagen. El procesamiento es realizado en la propia Raspberry Pi 5, aprovechando la capacidad de **Edge AI** para evitar la latencia asociada a la comunicación con servidores externos.
+**Descripción**: El modelo, ejecutado localmente mediante TensorFlow Lite, clasifica emociones en menos de 2 segundos por imagen, utilizando la capacidad de procesamiento de la Raspberry Pi (Edge AI), sin depender de la nube.
 
-## 4. Almacenamiento y Registro de Resultados
-**Función**: Los resultados de la clasificación se almacenan localmente con una marca temporal en la Raspberry Pi.
+## 4. Almacenamiento y Registro Local
+**Función**: Guardar temporalmente los resultados de la clasificación con marca de tiempo.
 
-**Descripción**: La información será almacenada en de manera local en archivos de registro para su posterior análisis y evaluación.
+**Dispositivo**: Almacenamiento local en la Raspberry Pi.
 
-## 5. Comunicación y Envío de Datos
-**Función**: Los resultados de la clasificación se envían de forma periódica al sistema de visualización a través de la red local (Wi-Fi o Ethernet).
+**Descripción**: Los datos se almacenan como archivos estructurados o en una base de datos ligera para su posterior consulta y respaldo.
 
-**Protocolo**: Los datos pueden ser enviados mediante un protocolo de comunicación como HTTP, MQTT o WebSocket.
+## 5. Envío de Resultados al Servidor
+**Función**: Transmitir los resultados periódicamente a un servidor central o computador central.
 
-**Descripción**: La comunicación debe ser eficiente y no debe afectar el rendimiento de la Raspberry Pi.
+**Protocolo**: HTTP, MQTT o WebSocket.
 
-## 6. Visualización de Datos
-**Función**: El sistema central recibe los datos y los muestra en una interfaz gráfica para su análisis.
+**Descripción**: Los datos son enviados por red local (Wi-Fi o Ethernet). Idealmente la transmisión debería ser eficiente y no interferir con el desempeño del sistema embebido.
 
-**Software**: Se puede utilizar una plataforma de visualización como Grafana, Kibana o una aplicación web personalizada.
+## 6. Visualización e Interacción
+**Función**: Mostrar los resultados en una interfaz gráfica accesible para el operador.
 
-**Descripción**: Los datos deben presentarse de manera clara y accesible, permitiendo a los operadores o responsables del análisis ver las emociones de los espectadores en tiempo real o a posteriori.
+**Software**: Interfaz local personalizada.
+
+**Descripción**: Los datos se presentan de forma visual, permitiendo un análisis en tiempo real o histórico del comportamiento emocional del público. Se puede incluir una función de activación/desactivación del sistema.
 
 ---
 
-# Diagrama de Flujo de Captura y Procesamiento de Imágenes
+# Diagrama de Flujo de Reconocimiento y clasificacion de emociones
 
 ```mermaid
 graph TD
@@ -62,27 +65,4 @@ graph TD
 
 ```
 
-
-Captura de Imágenes
-
-→ Cámara USB → (Captura imágenes) → Raspberry Pi
-
-Preprocesamiento de Imágenes
-
-Raspberry Pi → (Preprocesa imágenes con OpenCV) → TensorFlow Lite
-
-Clasificación de Emociones (Edge AI)
-
-Raspberry Pi → (Clasificación de emociones) → TensorFlow Lite
-
-Almacenamiento de Resultados
-
-Raspberry Pi → (Almacena resultados con marca temporal)
-
-Envío de Datos a Servidor
-
-Raspberry Pi → (Envía resultados por Wi-Fi/Ethernet) → Servidor Central
-
-Visualización en la Interfaz
-
-Servidor Central → (Muestra resultados en interfaz gráfica)
+El sistema comienza cuando un espectador reacciona de forma natural durante la proyección. Una cámara USB discretamente instalada captura imágenes de su rostro y las envía a una Raspberry Pi 5. Esta procesa las imágenes utilizando la biblioteca OpenCV para preprocesamiento y luego ejecuta un modelo de clasificación de emociones en TensorFlow Lite (Edge AI). El resultado de esta inferencia, es decir, la emoción detectada se almacena temporalmente junto con una marca de tiempo. Luego, la Raspberry Pi envía periódicamente estos datos al servidor central o computador central a través de una conexión Wi-Fi o Ethernet. En el servidor, los resultados se visualizan en una interfaz gráfica accesible para el operador del sistema. Según la información recibida, el sistema puede activarse o desactivarse automáticamente o mediante intervención manual, reiniciando así el ciclo de captura y análisis.
