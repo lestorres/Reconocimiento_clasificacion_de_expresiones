@@ -1,5 +1,5 @@
 # Arquitectura
-La arquitectura del sistema combina componentes de hardware y software para capturar, procesar, clasificar y visualizar las emociones de los espectadores en tiempo real. A continuación, se describe cómo cada función del sistema es ejecutada por un conjunto específico de componentes.
+La arquitectura del sistema combinará componentes de hardware y software para capturar, procesar, clasificar y visualizar las emociones de los espectadores en tiempo real. A continuación, se describe cómo cada función del sistema es ejecutada por un conjunto específico de componentes.
 
 ## Descripción General
 El sistema está compuesto por los siguientes bloques funcionales:
