@@ -49,21 +49,41 @@ Software: Dashboard en Grafana, Kibana o una aplicación web.
 
 ## Diagrama de Arquitectura del Sistema
 
+```mermaid
+flowchart LR
+    subgraph Entrada
+        A[Camara USB - UVC]
+    end
 
-graph TD
-    A[Cámara USB (UVC)] -->|Captura de imágenes| B[Raspberry Pi 5]
-    
-    B -->|Preprocesamiento (OpenCV)| C[Procesamiento de Imágenes]
-    C -->|Clasificación (TFLite)| D[Modelo de Emoción]
+    subgraph Preprocesamiento
+        B[Raspberry Pi 5]
+        C[OpenCV]
+    end
 
-    D -->|Resultados + timestamp| E[Almacenamiento local]
-    E -->|Envía vía HTTP/MQTT| F[Red Wi-Fi / Ethernet]
-    F -->|Datos en tiempo real| G[Servidor Central]
+    subgraph Clasificacion
+        D[Modelo TFLite]
+    end
 
-    G -->|Visualización| H[Interfaz Gráfica (Grafana/Kibana)]
+    subgraph Registro
+        E[Almacenamiento Local]
+    end
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style G fill:#bfb,stroke:#333,stroke-width:2px
+    subgraph Comunicacion
+        F[WiFi o Ethernet]
+    end
+
+    subgraph Visualizacion
+        G[Servidor Central]
+        H[Interfaz Grafica]
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
 
 
+```
