@@ -15,7 +15,7 @@ Entre los Requerimientos funcionales del sistema a implementar, se debe cumplir 
 
 
 ## ✅ 2. Requerimientos No Funcionales (RNF)
-Es importante aclarar que los **Requerimientos No Funcionales** hacen referencias a** restricciones o características de calidad que debe cumplir el sistema **, siendo *una métrica* para evaluar el rendimiento del sistema empleado. 
+Es importante aclarar que los **Requerimientos No Funcionales** hacen referencias a **restricciones o características de calidad que debe cumplir el sistema**, siendo "una métrica" para evaluar el rendimiento del sistema empleado. 
 | ID   | Nombre                     | Descripción                                                                 |
 | ---- | -------------------------- | --------------------------------------------------------------------------- |
 | RNF1 | Tiempo de respuesta        | El sistema debe clasificar emociones en menos de 2 segundos por imagen.     |
