@@ -3,7 +3,7 @@ Dentro de las dependencias generales para la imagen del sistema operativo de Yoc
 
 ## 🌲 Árbol de Dependencias de Capas Yocto (general)
 ```plaintext
-meta (poky base)
+poky
 │
 ├── meta-poky (distribución de referencia)
 ├── meta-yocto-bsp (BSPs de referencia)
