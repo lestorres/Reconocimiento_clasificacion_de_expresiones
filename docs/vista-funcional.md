@@ -45,7 +45,23 @@ En esta apartado se analizará la interacción de los componentes del sistema y 
 
 ---
 
-# Diagrama de Flujo Funcional:
+# Diagrama de Flujo de Captura y Procesamiento de Imágenes
+
+```mermaid
+graph TD
+    A[Reacción del Espectador] -->|Captura| B[Cámara USB]
+    B -->|Imagen capturada| C[Raspberry Pi 5]
+    C -->| Preprocesamiento| D[OpenCV]
+    D -->| Inferencia| E[TensorFlow Lite - Edge AI]
+    E -->| Clasificación de Emoción| F[Resultados con timestamp]
+    F -->| Comunicación| G[Envía por Wi-Fi/Ethernet]
+    G -->| Recepción| H[Servidor Central]
+    H -->| Visualización| I[Interfaz Gráfica]
+    I -->|Activación/Desactivación| J[Control de Ciclo]
+    J -->| Retorno al procesamiento| C
+
+```
+
 
 Captura de Imágenes
 
