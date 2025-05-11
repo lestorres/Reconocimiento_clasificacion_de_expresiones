@@ -8,44 +8,44 @@ El sistema está compuesto por los siguientes bloques funcionales:
 
 **Función**: Obtener imágenes faciales del espectador.
 
-Hardware: Cámara USB tipo UVC.
+**Hardware**: Cámara USB tipo UVC.
 
-Interfaz: USB.
+**Interfaz**: USB.
 
 ### 2. Procesamiento y Clasificación de Emociones (Edge AI)
 
-Función: Preprocesar imágenes y detectar emociones.
+**Función**: Preprocesar imágenes y detectar emociones.
 
-Hardware: Raspberry Pi 5.
+**Hardware**: Raspberry Pi 5.
 
-Software: OpenCV (preprocesamiento), TensorFlow Lite (clasificación).
+**Software**: OpenCV (preprocesamiento), TensorFlow Lite (clasificación).
 
-Interfaz: Interna (entre módulos de software en la Raspberry Pi).
+**Interfaz**: Interna (entre módulos de software en la Raspberry Pi).
 
 ### 3. Almacenamiento Temporal
 
-Función: Registrar resultados con marca de tiempo.
+**Función**: Registrar resultados con marca de tiempo.
 
-Hardware: Memoria local (SD o almacenamiento interno de la Raspberry Pi).
+**Hardware**: Memoria local (SD o almacenamiento interno de la Raspberry Pi).
 
-Software: Python (manejo de archivos o base de datos ligera como SQLite).
+**Software**: Python (manejo de archivos o base de datos ligera como SQLite).
 
 
 ### 4. Comunicación y Transmisión de Resultados
 
-Función: Enviar datos al servidor central.
+**Función**: Enviar datos al servidor central.
 
-Hardware: Módulo de red de la Raspberry Pi (Wi-Fi o Ethernet).
+**Hardware**: Módulo de red de la Raspberry Pi (Wi-Fi o Ethernet).
 
-Software: Cliente HTTP, MQTT o WebSocket implementado en Python.
+**Software**: Cliente HTTP, MQTT o WebSocket implementado en Python.
 
 ### 5. Visualización de Datos
 
-Función: Mostrar los resultados de forma gráfica para su análisis.
+**Función**: Mostrar los resultados de forma gráfica para su análisis.
 
-Hardware: Servidor central (PC o nube).
+**Hardware**: Servidor central (PC o nube).
 
-Software: Dashboard en Grafana, Kibana o una aplicación web.
+**Software**: Dashboard en Grafana, Kibana o una aplicación web.
 
 ## Diagrama de Arquitectura del Sistema
 
@@ -55,25 +55,16 @@ flowchart LR
         A[Camara USB - UVC]
     end
 
-    subgraph Preprocesamiento
-        B[Raspberry Pi 5]
+    subgraph  Raspberry Pi 5
+        B[Preprocesamiento]
         C[OpenCV]
-    end
-
-    subgraph Clasificacion
         D[Modelo TFLite]
-    end
-
-    subgraph Registro
         E[Almacenamiento Local]
-    end
-
-    subgraph Comunicacion
         F[WiFi o Ethernet]
     end
 
-    subgraph Visualizacion
-        G[Servidor Central]
+    subgraph Servidor Central
+        G[Visualizacion]
         H[Interfaz Grafica]
     end
 
