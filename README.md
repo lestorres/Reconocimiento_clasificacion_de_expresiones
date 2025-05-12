@@ -1,7 +1,7 @@
 # II Proyecto: EdgeAI - Sistema Embebido para el reconocimiento y clasificación de expresiones faciales
 
 
-# 🎬 Tema del Proyecto: Sistema Embebido de Análisis de Emociones en Sala de Cine
+## 🎬 Tema del Proyecto: Sistema Embebido de Análisis de Emociones en Sala de Cine
 
 ## 👥 Integrantes
 - **Carolina** – Investigadora, Directora de Proyecto
@@ -10,7 +10,7 @@
 ## 🧠 Descripción breve
 Este proyecto propone un sistema embebido en red, instalado en una sala de cine, para detectar emociones en los espectadores mediante Edge AI y Raspberry Pi.
 
-## 📄 Documentación
+## 📄 Documentación Propuesta
 - [Justificación](docs/justificacion.md)
 - [Problema](docs/problema.md)
 - [Requerimientos](docs/requerimientos.md)
@@ -25,11 +25,12 @@ Este proyecto propone un sistema embebido en red, instalado en una sala de cine,
 ## 🌱 Ramas de trabajo
 - `main`
 - `carolina-propuesta`
-- `lesmes-tecnico`
+- `lesmes-propuesta`
 - `colab-justificacion`
 
 ## 🚀 Clonar el repositorio
 
 ```bash
-git clone https://github.com/tuusuario/cine-emociones.git
+git clone https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones.git
+```
 
