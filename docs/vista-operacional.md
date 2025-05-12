@@ -17,7 +17,6 @@ flowchart TD
     end
 
     subgraph Raspberry Pi
-        R1[⚙️ Inicialización sistema]
         R2[📥 Solicita imagen a cámara]
         R3[🧠 Clasificación con modelo TFLite]
         R4[💾 Guarda emociones + timestamp]
@@ -32,8 +31,7 @@ flowchart TD
     U1 --> U2
     U2 --> O1
     O1 --> O2
-    O2 --> R1
-    R1 --> R2
+    O2 --> R2
     R2 --> CAM1
     CAM1 --> R3
     R3 --> R4
