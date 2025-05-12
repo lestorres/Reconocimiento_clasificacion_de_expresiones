@@ -13,11 +13,11 @@ flowchart TB
     end
 
     subgraph Raspberry Pi 5
-        B[🧠 Preprocesamiento con OpenCV]
+        B[🧠 Preprocesamiento OpenCV]
         C[🔍 Inferencia con TFLite]
-        D[🏷️ Clasificación con Modelo Edge IA]
+        D[🏷️ Clasificación con Modelo ]
         E[💾 Almacenamiento local]
-        F[📡 Envío de datos por WiFi/Ethernet]
+        F[📡 Envío de datos ]
 
         subgraph Sistema Yocto
             Y1[meta-poky]
@@ -29,8 +29,8 @@ flowchart TB
     end
 
     subgraph Servidor Central
-        G[🖥️ Visualización de resultados]
-        H[🧩 Interfaz gráfica de control]
+        G[🖥️ Visualización resultados]
+        H[🧩 Interfaz de control]
         I[🔁 Control de ciclo remoto]
     end
 
