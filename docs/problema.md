@@ -9,6 +9,9 @@ Este proyecto representa un caso de estudio realista y desafiante en el diseño 
 
 ### Referencias
 [1] T. -L. Liao, Y. -Y. Hou and Y. -H. Tseng, "Movie Recommendation System Based on Facial Emotion Recognition," 2024 IEEE International Conference on Future Machine Learning and Data Science (FMLDS), Sydney, Australia, 2024, pp. 141-146, doi: 10.1109/FMLDS63805.2024.00036.
+
 [2] D. Shukla, R. Kumari and A. Bhargavi, "Human Face Detection and Emotion Recognition Using OpenCV through AI," 2024 12th International Conference on Internet of Everything, Microwave, Embedded, Communication and Networks (IEMECON), Jaipur, India, 2024, pp. 1-5, doi: 10.1109/IEMECON62401.2024.10845980.
+
 [3] S. Turabzadeh, H. Meng, R. M. Swash, M. Pleva and J. Juhar, "Real-time emotional state detection from facial expression on embedded devices," 2017 Seventh International Conference on Innovative Computing Technology (INTECH), Luton, UK, 2017, pp. 46-51, doi: 10.1109/INTECH.2017.8102423.
+
 [4] M. Srinivas; Sanjeev Saurav; Akshay Nayak; A. P. Murukessan, "Facial Expression Recognition Using Fusion of Deep Learning and Multiple Features," in Machine Learning Algorithms and Applications , Wiley, 2021, pp.229-246, doi: 10.1002/9781119769262.ch13.
