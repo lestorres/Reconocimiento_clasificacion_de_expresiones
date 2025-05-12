@@ -9,7 +9,6 @@ flowchart TD
 
     subgraph Operador
         O1[🧑‍💻 Inicia el sistema]
-        O2[📤 Envía comando SSH]
     end
 
     subgraph Cámara
@@ -20,7 +19,7 @@ flowchart TD
         R2[📥 Solicita imagen a cámara]
         R3[🧠 Clasificación con modelo TFLite]
         R4[💾 Guarda emociones + timestamp]
-        R5[📤 Envía reporte por SSH]
+        R5[📤 Envía reporte]
     end
 
     subgraph Computador del Usuario
@@ -29,8 +28,7 @@ flowchart TD
     end
 
     U1 --> U2
-    U2 --> O1
-    O1 --> O2
+    U2 --> O2
     O2 --> R2
     R2 --> CAM1
     CAM1 --> R3
