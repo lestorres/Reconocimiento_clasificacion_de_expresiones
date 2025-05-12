@@ -15,5 +15,5 @@ Para garantizar una ejecución ordenada y efectiva del proyecto, se realizó una
 - Integración final y pruebas completas del sistema: Se realiza una verificación integral que incluya detección en tiempo real, registro local, comunicación remota, y funcionamiento continuo en la Raspberry Pi, asegurando la coherencia con los objetivos del proyecto.
 
 <p align="center">
-  <img src="docs/imag/diagrama.jpg"  width="500"/>
+  <img src="../imag/diagrama.jpg"  width="500"/>
 </p>
