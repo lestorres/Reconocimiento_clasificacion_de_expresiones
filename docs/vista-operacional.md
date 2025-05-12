@@ -57,9 +57,9 @@ En este punto se presenta una descripción del comportamiento del sistema con el
 A partir de las funciones que desempeñan el espectador y el usuario, es posible construir el diagrama de casos de uso. El espectador simplemente se sienta y disfruta de la función de cine, mientras que el operador se encarga de varias funciones: iniciar y finalizar la ejecución de la aplicación, así como analizar los datos recolectados y generar reportes.
 
 ```mermaid
-flowchart RD
+flowchart TD
 
-    subgraph 
+    subgraph Eventos
         A[Se sienta en la sala de cine y visualiza la película]
         B[Inicia la ejecución del sistema]
         C[Finaliza la ejecución del sistema]
@@ -67,11 +67,11 @@ flowchart RD
         E[Genera un reporte con datos obtenidos]
     end
 
-    subgraph
+    subgraph Espectador
         S[Espectador]
     end
 
-    subgraph
+    subgraph Operador
         O[Operador]
     end
 
@@ -82,10 +82,7 @@ flowchart RD
     O --> D
     O --> E
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
+
 
 ```
 
