@@ -82,6 +82,11 @@ flowchart RD
     O --> D
     O --> E
 
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+
 ```
 
 ## 🕒 Diagrama de Secuencia
