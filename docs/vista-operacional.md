@@ -90,7 +90,7 @@ flowchart TD
 Seguidamente se presenta el diagrama de secuencia del sistema, en el que se consideran cinco elementos principales: el espectador, la cámara, la Raspberry Pi, el operador y el computador del operador. En esta secuencia, el espectador se limita a disfrutar de la película sin intervenir en el proceso. El operador se encarga de inicializar el sistema, lo que activa la interfaz e inicia el programa de detección de emociones. A partir de este punto, la cámara captura imágenes que son procesadas por la Raspberry Pi, donde también se almacenan los archivos generados. Este ciclo se repite de forma continua hasta que el operador/usuario decide finalizar la ejecución. Finalmente, los datos son transferidos al computador, donde la interfaz permite visualizar los resultados en formato de texto o gráficos.
 
 <p align="center">
-  <img src="../imag/secuencia.jfif"  width="1000"/>
+  <img src="../imag/secuencia.jfif"  width="800"/>
 </p>
 
 ### Referencias
