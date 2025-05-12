@@ -33,7 +33,7 @@ Entre lo planeado para el hardware a utilizar se proponen los siguientes element
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Hardware**  | - Raspberry Pi 5 (8GB RAM)  <br> - Webcam USB tipo UVC  <br> - Fuente de alimentación 5V 3A USB-C <br> - Conectividad Wi-Fi o Ethernet                                       |
 | **Software**  | - Linux embebido generado con **Yocto Project** <br> - Python 3.10+ <br> - OpenCV 4+ <br> - TensorFlow Lite (tflite-runtime) <br> - Sistema de comunicación cliente-servidor para envío de resultados |
-| **Bibliotecas** | - Numpy <br> - OpenCV <br> - TensorFlow Lite Runtime <br> - imutils <br> - PyUSB (opcional para gestión de dispositivos USB)                                                                          |
+| **Bibliotecas** | - Numpy <br> - OpenCV <br> - TensorFlow Lite Runtime <br> - imutils <br> - PyUSB                                                                          |
 | **Dataset**   | - Bases de datos de emociones faciales etiquetadas como:  <br> → FER2013  <br> → RAF-DB  <br> → CK+ (Cohn-Kanade+)                                                                                    |
 
 
