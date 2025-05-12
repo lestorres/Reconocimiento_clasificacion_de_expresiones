@@ -52,3 +52,39 @@ En este punto se presenta una descripción del comportamiento del sistema con el
 - 🟩 Raspberry Pi 5: La raspberry recibe las imágenes capturadas por la cámara y la clasifica para determinar el estado emocional de la persona, por ultimo guarda la imagen mediante un archivo que contiene la emoción y el tiempo en que el rostro fue capturado.
 
 - 🟥 Computador del Operador: Cuando termina la función o el operador decide finalizar el monitoreo, este envía otro comando a la Raspberry Pi para detener el sistema. Los archivos generados (emociones + timestamps) se transfieren automáticamente al computador del operador mediante protocolo SSH, aprovechando que ambos dispositivos están conectados a la misma red WiFi.
+
+## 🎯 Diagrama de Casos de Uso
+A partir de las funciones que desempeñan el espectador y el usuario, es posible construir el diagrama de casos de uso. El espectador simplemente se sienta y disfruta de la función de cine, mientras que el operador se encarga de varias funciones: iniciar y finalizar la ejecución de la aplicación, así como analizar los datos recolectados y generar reportes.
+
+```mermaid
+flowchart RD
+
+    subgraph 
+        A[Se sienta en la sala de cine y visualiza la película]
+        B[Inicia la ejecución del sistema]
+        C[Finaliza la ejecución del sistema]
+        D[Analiza los datos del sistema]
+        E[Genera un reporte con datos obtenidos]
+    end
+
+    subgraph
+        S[Espectador]
+    end
+
+    subgraph
+        O[Operador]
+    end
+
+
+    S --> A
+    O --> B
+    O --> C
+    O --> D
+    O --> E
+
+```
+
+## 🕒 Diagrama de Secuencia
+
+###Referencias
+R. Kadakia, P. Kalkotwar, P. Jhaveri, R. Patanwadia and K. Srivastava, "Analysis of Micro Expressions using XAI," 2022 3rd International Conference on Computing, Analytics and Networks (ICAN), Rajpura, Punjab, India, 2022, pp. 1-7, doi: 10.1109/ICAN56228.2022.10007340.
