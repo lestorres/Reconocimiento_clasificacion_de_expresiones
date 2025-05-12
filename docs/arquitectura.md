@@ -50,7 +50,7 @@ El sistema está compuesto por los siguientes bloques funcionales:
 ## Diagrama de Arquitectura del Sistema
 
 ```mermaid
-flowchart LR
+flowchart TB
 
     subgraph Camara USB
         A[Entrada de video o Captura de imágenes]
