@@ -28,8 +28,8 @@ flowchart TD
     end
 
     U1 --> U2
-    U2 --> O2
-    O2 --> R2
+    U2 --> O1
+    O1 --> R2
     R2 --> CAM1
     CAM1 --> R3
     R3 --> R4
