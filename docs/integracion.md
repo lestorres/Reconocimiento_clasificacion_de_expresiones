@@ -1,5 +1,6 @@
 # Integración
 
+El diagrama de la arquitectura integrada de software y hardware es: 
 
 ```mermaid
 flowchart TB
@@ -20,7 +21,7 @@ flowchart TB
         F[📤 Envío de paquetes vía WiFi/Ethernet]
     end
 
-    subgraph Servidor Central
+    subgraph Servidor o computador 
         G[📊 Visualización]
         H[🖥️ Interfaz Gráfica para Operador]
         I[🕹️ Control de Ciclo o Ajustes]
@@ -55,7 +56,7 @@ La solución implementada combina de forma coordinada componentes de hardware y 
 
   - Red de comunicación (hardware/software): Se utiliza WiFi o Ethernet para transferir los resultados inferidos (emociones y timestamps) al servidor central.
 
-- 🟥 Servidor Central (hardware + software): Recibe los datos procesados desde la Raspberry Pi y permite la interacción con el operador:
+- 🟥 Servidor o computador Central (hardware + software): Recibe los datos procesados desde la Raspberry Pi y permite la interacción con el operador:
 
   - Interfaz Gráfica (software): Presenta visualmente las emociones detectadas y permite al operador ajustar parámetros del sistema (por ejemplo, encender/apagar el ciclo de inferencia o cambiar umbrales de confianza).
 
