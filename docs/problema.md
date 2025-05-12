@@ -7,7 +7,7 @@ El sistema debe reconocer al menos seis emociones básicas: enojo, felicidad, tr
 
 Este proyecto representa un caso de estudio realista y desafiante en el diseño de soluciones inteligentes, distribuidas y embebidas, con aplicación directa en contextos del mundo real como las salas de cine, y potencial de escalabilidad hacia otros entornos sensibles al análisis emocional.
 
-## Referencias
+### Referencias
 - T. -L. Liao, Y. -Y. Hou and Y. -H. Tseng, "Movie Recommendation System Based on Facial Emotion Recognition," 2024 IEEE International Conference on Future Machine Learning and Data Science (FMLDS), Sydney, Australia, 2024, pp. 141-146, doi: 10.1109/FMLDS63805.2024.00036.
 - D. Shukla, R. Kumari and A. Bhargavi, "Human Face Detection and Emotion Recognition Using OpenCV through AI," 2024 12th International Conference on Internet of Everything, Microwave, Embedded, Communication and Networks (IEMECON), Jaipur, India, 2024, pp. 1-5, doi: 10.1109/IEMECON62401.2024.10845980.
 - S. Turabzadeh, H. Meng, R. M. Swash, M. Pleva and J. Juhar, "Real-time emotional state detection from facial expression on embedded devices," 2017 Seventh International Conference on Innovative Computing Technology (INTECH), Luton, UK, 2017, pp. 46-51, doi: 10.1109/INTECH.2017.8102423.
