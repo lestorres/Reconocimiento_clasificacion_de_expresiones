@@ -37,7 +37,7 @@ flowchart TD
     CAM1 --> R3
     R3 --> R4
     R4 --> R5
-    R5 --> CU1
-    CU1 --> CU2
+    R5 --> C1
+    C1 --> C2
 
 ```
