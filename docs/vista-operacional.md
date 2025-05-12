@@ -17,15 +17,16 @@ flowchart TD
     end
 
     subgraph Raspberry Pi
-        R1[📷 Procesa la imagen]
-        R2[🧠 Clasificación con modelo TFLite]
+        R1[⚙️ Inicialización sistema]
+        R2[📥 Solicita imagen a cámara]
+        R3[🧠 Clasificación con modelo TFLite]
         R4[💾 Guarda emociones + timestamp]
         R5[📤 Envía reporte por SSH]
     end
 
     subgraph Computador del Usuario
-        C1[📥 Recepción del reporte]
-        C2[📊 Visualización/Análisis de emociones]
+        CU1[📥 Recepción del reporte]
+        CU2[📊 Visualización/Análisis de emociones]
     end
 
     U1 --> U2
@@ -37,7 +38,7 @@ flowchart TD
     CAM1 --> R3
     R3 --> R4
     R4 --> R5
-    R5 --> C1
-    C1 --> C2
+    R5 --> CU1
+    CU1 --> CU2
 
 ```
