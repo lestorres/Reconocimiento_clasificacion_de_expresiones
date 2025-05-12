@@ -10,7 +10,11 @@ El sistema tiene como requisito ser capaz de reconocer seis emociones básicas: 
 
 Por otro lado, como norma se debe asegurar que el sistema cuente con mecanismos de seguridad y privacidad que garanticen que los datos capturados sean procesados de manera segura. Esto implica el uso de técnicas de encriptación para transmitir la información de manera protegida hacia un sistema de análisis local [6]. Además la personalización del sistema operativo a través del uso de Yocto Project permitirá crear una imagen de sistema operativo adaptada y optimizada para el hardware de la Raspberry Pi 5, garantizando que todas las dependencias necesarias para el funcionamiento del sistema [7].
 
-Finalmente este proyecto tiene aplicaciones en el análisis emocional en salas de cine, que tiene la capacidad de analizar las reacciones emocionales en tiempo real de los espectadores y permitir una personalización del contenido. Además, el sistema tiene un potencial de ser aplicado a otros sectores, como la educación o la salud mental, donde la monitorización emocional tiene un impacto positivo en el bienestar de los individuos [8].
+La integración de sistemas de reconocimiento emocional en entornos como las salas de cine representa un avance significativo en el campo de la interacción humano-máquina (HCI). Estos sistemas permiten adaptar dinámicamente la experiencia del usuario en función de su estado emocional, lo que favorece una comunicación más natural y empática entre el ser humano y la tecnología. En el contexto del entretenimiento, esto podría traducirse en una mayor inmersión y disfrute, ya que el contenido se ajusta automáticamente a las respuestas emocionales del espectador. Este enfoque está alineado con los principios del affective computing, una rama de la HCI que busca dotar a los sistemas computacionales de la capacidad de reconocer, interpretar y responder a emociones humanas, mejorando así la calidad de la interacción y la satisfacción del usuario [8].
+
+Aunque el uso de tecnologías que monitorizan emociones promete beneficios en términos de personalización y bienestar, también plantea interrogantes sobre su impacto psicológico. La constante evaluación emocional puede generar efectos no deseados, como fatiga cognitiva, sensación de vigilancia o dependencia de validaciones externas por parte del sistema. Además, existe el riesgo de que los usuarios modifiquen su comportamiento de forma inconsciente al saberse observados, lo que podría alterar la autenticidad de sus reacciones. Es fundamental considerar estos aspectos para diseñar sistemas que no solo sean tecnológicamente eficientes, sino también emocionalmente sostenibles. Por tanto, es necesario implementar mecanismos de control, consentimiento informado y retroalimentación del usuario que promuevan una relación ética y saludable con estas tecnologías [9].
+
+Finalmente este proyecto tiene aplicaciones en el análisis emocional en salas de cine, que tiene la capacidad de analizar las reacciones emocionales en tiempo real de los espectadores y permitir una personalización del contenido. Además, el sistema tiene un potencial de ser aplicado a otros sectores, como la educación o la salud mental, donde la monitorización emocional tiene un impacto positivo en el bienestar de los individuos [10].
 
 
 
@@ -30,4 +34,8 @@ Finalmente este proyecto tiene aplicaciones en el análisis emocional en salas d
 
 [7] T. Cheng, X. Zhang, and P. Yang, "Yocto Project for embedded system customization," IEEE Embedded Systems Conference, pp. 45-51, 2017.
 
-[8] A. T. Nelson, J. A. Glickman, and P. Sharma, "Scalable emotion recognition: Applications in education and mental health," IEEE Transactions on Affective Computing, vol. 12, no. 3, pp. 99-110, 2023.
+[8] Picard, R. W. (1997). Affective Computing. MIT Press.
+
+[9] Calvo, R. A., & D'Mello, S. (2010). Affect detection: An interdisciplinary review of models, methods, and their applications. IEEE Transactions on Affective Computing, 1(1), 18–37. https://doi.org/10.1109/T-AFFC.2010.1
+
+[10] A. T. Nelson, J. A. Glickman, and P. Sharma, "Scalable emotion recognition: Applications in education and mental health," IEEE Transactions on Affective Computing, vol. 12, no. 3, pp. 99-110, 2023.
