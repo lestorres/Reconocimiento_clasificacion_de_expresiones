@@ -14,5 +14,6 @@ Para garantizar una ejecución ordenada y efectiva del proyecto, se realizó una
 - Desarrollo de una interfaz operativa básica: Se crea una interfaz de usuario simple que facilite el arranque, monitoreo y cierre del sistema, así como la consulta de los reportes generados.
 - Integración final y pruebas completas del sistema: Se realiza una verificación integral que incluya detección en tiempo real, registro local, comunicación remota, y funcionamiento continuo en la Raspberry Pi, asegurando la coherencia con los objetivos del proyecto.
 
-![Diagrama del sistema](imag/diagrama.jpg)
-
+<p align="center">
+  <img src="imag/diagrama.jpg"  width="500"/>
+</p>
