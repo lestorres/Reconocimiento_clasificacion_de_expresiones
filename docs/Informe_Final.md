@@ -1,3 +1,44 @@
+# II Proyecto: EdgeAI - Sistema Embebido para el Reconocimiento y Clasificación de Expresiones Faciales
+
+**Autores**  
+Carolina Zuñiga Blanco [carolinazb200@estudiantec.cr]  
+Lesmes Torres González [lesmestorres@estudiantec.cr]  
+
+
+
+---
+
+## 🎯 Objetivo del Proyecto
+
+Desarrollar un sistema embebido en red, instalado en una sala de cine, para detectar emociones en los espectadores mediante Edge AI y Raspberry Pi.
+
+---
+
+## 🧩 Descripción del Proyecto
+
+El proyecto consiste en el diseño e implementación de un sistema embebido para el análisis automático de emociones en salas de cine, utilizando visión por computador y algoritmos de aprendizaje automático. El sistema estará compuesto por nodos inteligentes basados en Raspberry Pi, integrados de forma discreta en los respaldos de los asientos para evitar interferencias o sesgos en la experiencia del espectador. Cada nodo operará bajo un esquema de **Edge Computing**, permitiendo la captura, procesamiento y clasificación local de expresiones faciales en tiempo real (Edge AI).
+
+El objetivo es detectar seis emociones básicas:
+
+- Enojo  
+- Disgusto  
+- Miedo  
+- Felicidad  
+- Tristeza  
+- Sorpresa  
+
+Estas emociones serán detectadas en respuesta a estímulos visuales durante la proyección. Esta información podrá ser utilizada para evaluar el impacto emocional del contenido audiovisual y optimizar la creación de experiencias más personalizadas e inmersivas.
+
+
+
+## 🔗 Enlaces del Proyecto
+
+Repositorio en GitHub: [Proyecto 2](https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones)
+
+
+
+---
+
 # Justificación
 
 El proyecto propuesto tiene un gran potencial para mejorar la experiencia del espectador en las salas de cine. La aplicación permitiría recopilar datos sobre las reacciones emocionales de los espectadores ante diferentes tipos de escenas, lo que facilitaría el entrenamiento de nuevos modelos de aprendizaje automático más precisos y eficientes. Eso sería posible mediante esta adaptabilidad, ya que ayudaría a ofrecer recomendaciones personalizadas, como propuestas de película o cambio de género, basadas en el estado emocional del espectador. Es decir, si el sistema detectara señales de aburrimiento o desinterés, podría proponer una alternativa más próxima a sus gustos, con lo que su nivel de satisfacción aumentaría [5].
