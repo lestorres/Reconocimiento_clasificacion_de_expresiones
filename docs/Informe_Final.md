@@ -79,41 +79,35 @@ A continuación, se muestra un diagrama de la vista operacional del sistema:
 
 ```mermaid
 flowchart TD
-    subgraph Sala de Cine
-        A[🎟️ Espectadores entran al cine]
-        B[🎥 Inicia la película]
-    end
-
-    subgraph Operador
-        C[🧑‍💻 Inicia el sistema]
-    end
-
-    subgraph Cámara
-        CAM1[📷 Captura emociones]
-    end
-
-    subgraph Raspberry Pi
-        R1[📥 Solicita imagen a cámara]
-        R2[🧠 Clasificación de emociones]
-        R3[💾 Guarda emociones + timestamp]
-        R4[📤 Envía reporte]
-    end
-
-    subgraph Computador del Operador
-        D[📥 Recepción del reporte]
-        E[📊 Visualización/Análisis de emociones]
-    end
-
+ subgraph Sala["Sala de Cine"]
+        A["🎟️ Espectadores entran al cine"]
+        B["🎥 Inicia la película"]
+  end
+ subgraph Operador["Operador"]
+        C["🧑‍💻 Inicia el sistema"]
+  end
+ subgraph camara["Cámara"]
+        CAM1["📷 Captura emociones"]
+  end
+ subgraph rasp ["Raspberry Pi 5"]
+        R1["📥 Solicita imagen a cámara"]
+        R2["🧠 Clasificación de emociones"]
+        R3["💾 Guarda emociones + timestamp"]
+        R4["📤 Envía reporte"]
+  end
+ subgraph operador_compu["Computador del Operador"]
+        D["📥 Recepción del reporte"]
+        E["📊 Visualización/Análisis de emociones"]
+  end
     A --> B
-    B --> C
-    C --> R1
-    R1 --> CAM1
+    B --> Operador
+    C --> rasp
+    R1 --> camara
     CAM1 --> R2
     R2 --> R3
     R3 --> R4
-    R4 --> D
+    R4 --> operador_compu
     D --> E
-
 ```
 
 ## 🧩 Descripción de la vista operacional
@@ -169,7 +163,7 @@ Seguidamente se presenta el diagrama de secuencia del sistema, en el que se cons
 
 
 
-![diagrama](https://github.com/user-attachments/assets/7dd06dc9-bf68-4973-8fc5-b984fcc09e9e)
+![diagrama](https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/diagrama.png)
 
 
 ---
@@ -494,9 +488,8 @@ Para garantizar una ejecución ordenada y efectiva del proyecto, se realizó una
 - Integración final y pruebas completas del sistema: Se realiza una verificación integral que incluya detección en tiempo real, registro local, comunicación remota, y funcionamiento continuo en la Raspberry Pi, asegurando la coherencia con los objetivos del proyecto.
 
 ## Diagrama de Gantt
-<p align="center">
-  <img src="../imag/diagrama.jpg"  width="1000"/>
-</p>
+
+![diagrama_gant](https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/diagrama.jpg)
 
 
 ---
