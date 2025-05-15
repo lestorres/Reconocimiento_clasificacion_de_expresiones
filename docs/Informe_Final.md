@@ -1,3 +1,14 @@
+# Problema
+En la actualidad, el análisis automático de emociones ha ganado relevancia en sectores como la publicidad, la salud mental, la educación y el entretenimiento. Particularmente en la industria del cine, comprender las reacciones emocionales de los espectadores ante determinados estímulos visuales puede aportar información valiosa para el desarrollo de contenido más atractivo y personalizado [1]. No obstante, los métodos tradicionales de recolección de estas emociones (encuestas post-función, entrevistas, etc.) resultan ser poco precisos, no escalables y altamente dependientes de la memoria y predisposición del espectador. Esta limitación impide una evaluación en tiempo real y en condiciones naturales, donde las emociones espontáneas son clave [2].
+
+Para solventar esta situación, se requiere el desarrollo de un sistema embebido que, de manera autónoma y en tiempo real, capture y clasifique las expresiones faciales de los espectadores durante la proyección de una película. Este sistema deberá operar bajo un esquema de edge computing (Edge AI), procesando localmente la información capturada para minimizar la latencia y proteger la privacidad del usuario. El reto técnico incluye integrar hardware compacto (Raspberry Pi), herramientas de visión por computador (OpenCV), modelo de redes neuronales optimizadas para dispositivos embebidos (TensorFlow Lite) y una imagen de sistema operativo personalizada generada con Yocto Project, que contemple todas las dependencias y configuraciones necesarias para la operación [3].
+
+El sistema debe reconocer al menos seis emociones básicas: enojo, felicidad, tristeza, miedo, disgusto y sorpresa. También debe registrar la actividad detectada mediante estampas de tiempo y transmitir los datos de forma segura hacia un sistema remoto o local para su posterior análisis [4]. Todo este procesamiento debe llevarse a cabo localmente para minimizar la latencia y optimizar el uso del ancho de banda.
+
+Este proyecto representa un caso de estudio realista y desafiante en el diseño de soluciones inteligentes, distribuidas y embebidas, con aplicación directa en contextos del mundo real como las salas de cine, y potencial de escalabilidad hacia otros entornos sensibles al análisis emocional.
+
+---
+
 # Justificación
 
 El proyecto propuesto tiene un gran potencial para mejorar la experiencia del espectador en las salas de cine. La aplicación permitiría recopilar datos sobre las reacciones emocionales de los espectadores ante diferentes tipos de escenas, lo que facilitaría el entrenamiento de nuevos modelos de aprendizaje automático más precisos y eficientes. Eso sería posible mediante esta adaptabilidad, ya que ayudaría a ofrecer recomendaciones personalizadas, como propuestas de película o cambio de género, basadas en el estado emocional del espectador. Es decir, si el sistema detectara señales de aburrimiento o desinterés, podría proponer una alternativa más próxima a sus gustos, con lo que su nivel de satisfacción aumentaría [5].
@@ -18,16 +29,7 @@ Por último este proyecto tiene futuro en el análisis emocional en salas de cin
 
 ---
 
-# Problema
-En la actualidad, el análisis automático de emociones ha ganado relevancia en sectores como la publicidad, la salud mental, la educación y el entretenimiento. Particularmente en la industria del cine, comprender las reacciones emocionales de los espectadores ante determinados estímulos visuales puede aportar información valiosa para el desarrollo de contenido más atractivo y personalizado [1]. No obstante, los métodos tradicionales de recolección de estas emociones (encuestas post-función, entrevistas, etc.) resultan ser poco precisos, no escalables y altamente dependientes de la memoria y predisposición del espectador. Esta limitación impide una evaluación en tiempo real y en condiciones naturales, donde las emociones espontáneas son clave [2].
 
-Para solventar esta situación, se requiere el desarrollo de un sistema embebido que, de manera autónoma y en tiempo real, capture y clasifique las expresiones faciales de los espectadores durante la proyección de una película. Este sistema deberá operar bajo un esquema de edge computing (Edge AI), procesando localmente la información capturada para minimizar la latencia y proteger la privacidad del usuario. El reto técnico incluye integrar hardware compacto (Raspberry Pi), herramientas de visión por computador (OpenCV), modelo de redes neuronales optimizadas para dispositivos embebidos (TensorFlow Lite) y una imagen de sistema operativo personalizada generada con Yocto Project, que contemple todas las dependencias y configuraciones necesarias para la operación [3].
-
-El sistema debe reconocer al menos seis emociones básicas: enojo, felicidad, tristeza, miedo, disgusto y sorpresa. También debe registrar la actividad detectada mediante estampas de tiempo y transmitir los datos de forma segura hacia un sistema remoto o local para su posterior análisis [4]. Todo este procesamiento debe llevarse a cabo localmente para minimizar la latencia y optimizar el uso del ancho de banda.
-
-Este proyecto representa un caso de estudio realista y desafiante en el diseño de soluciones inteligentes, distribuidas y embebidas, con aplicación directa en contextos del mundo real como las salas de cine, y potencial de escalabilidad hacia otros entornos sensibles al análisis emocional.
-
----
 
 # Requerimientos
 
