@@ -77,7 +77,7 @@ Entre lo planeado para el hardware a utilizar se proponen los siguientes element
 # Vista Operacional
 A continuación, se muestra un diagrama de la vista operacional del sistema:
 
-<img src="https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/vista_operacional_1.png?raw=true" alt="vista_op1" width="400"/>
+<img src="../imag/vista_operacional_1.png?raw=true" alt="vista_op1" width="400"/>
 
 
 ## 🧩 Descripción de la vista operacional
@@ -98,14 +98,14 @@ A partir de las funciones que desempeñan el espectador y el operador, es posibl
 
 Cabe destacar que la elección de capturar las imágenes a una tasa de 1 cuadro por segundo (1 fps) se debe a que las emociones de corta duración —que suelen ser las expresiones más comunes al visualizar una película— tienden a mantenerse durante varios segundos. Por ello, este intervalo de captura resulta suficiente para registrar dichas emociones de manera efectiva [15].
 
-![eventos](https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/eventos.png)
+<img src="../imag/eventos.png?raw=true" alt="eventos" width="800"/>
+
 
 ## 🕒 Diagrama de secuencia
 Seguidamente se presenta el diagrama de secuencia del sistema, en el que se consideran cinco elementos principales: el espectador, la cámara, la Raspberry Pi, el operador y el computador del operador. En esta secuencia, el espectador se limita a disfrutar de la película sin intervenir en el proceso. El operador se encarga de inicializar el sistema, lo que activa la interfaz e inicia el programa de detección de emociones. A partir de este punto, la cámara captura imágenes que son procesadas por la Raspberry Pi, donde también se almacenan los archivos generados. Este ciclo se repite de forma continua hasta que el operador decide finalizar la ejecución. Finalmente, los datos son transferidos al computador, donde la interfaz permite visualizar los resultados en formato de texto o gráficos.
 
 
-
-![diagrama](https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/diagrama.png)
+<img src="../imag/diagrama.png?raw=true" alt="diagrama" width="800"/>
 
 
 ---
@@ -163,7 +163,7 @@ En esta apartado se analizará la interacción de los componentes del sistema y 
 # Diagrama de Flujo de Reconocimiento y clasificacion de emociones
 
 
-<img src="https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/vista_funcional_1.png?raw=true" alt="arqui" width="300"/>
+<img src="../imag/vista_funcional_1.png?raw=true" alt="arqui" width="300"/>
 
 
 ## 📘 Descripción funcional del flujo del sistema
@@ -231,7 +231,7 @@ El sistema está compuesto por los siguientes bloques funcionales:
 
 ## Diagrama de Arquitectura del Sistema
 
-<img src="https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/arquitectura.png?raw=true" alt="arqui" width="500"/>
+<img src="../imag/arquitectura.png?raw=true" alt="arqui" width="300"/>
 
 
 ## 📘 Descripción funcional del flujo del sistema
@@ -288,7 +288,7 @@ poky
 El diagrama de la arquitectura integrada de software y hardware es: 
 
 
-<img src="https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/integracion.png?raw=true" alt="arqui" width="400"/>
+<img src="../imag/integracion.png?raw=true" alt="inte" width="400"/>
 
 
 ## 🧩 Descripción del proceso de integración hardware/software
@@ -335,7 +335,7 @@ Para garantizar una ejecución ordenada y efectiva del proyecto, se realizó una
 
 ## Diagrama de Gantt
 
-![diagrama_gant](https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/diagrama.jpg)
+<img src="../imag/diagrama.jpg?raw=true" alt="gantt" width="1000"/>
 
 
 ---
