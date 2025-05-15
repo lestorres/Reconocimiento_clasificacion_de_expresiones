@@ -22,6 +22,9 @@ Este proyecto propone un sistema embebido en red, instalado en una sala de cine,
 - [Planificación](docs/planificacion.md)
 - [Conclusiones](docs/conclusiones.md)
 
+## 📄 Propuesta de proyecto
+- [Propuesta](docs/Informe_Final.md)
+
 ## 🌱 Ramas de trabajo
 - `main`
 - `carolina-propuesta`
