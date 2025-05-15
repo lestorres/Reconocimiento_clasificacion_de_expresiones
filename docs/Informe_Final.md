@@ -77,38 +77,8 @@ Entre lo planeado para el hardware a utilizar se proponen los siguientes element
 # Vista Operacional
 A continuación, se muestra un diagrama de la vista operacional del sistema:
 
-```mermaid
-flowchart TD
- subgraph Sala["Sala de Cine"]
-        A["🎟️ Espectadores entran al cine"]
-        B["🎥 Inicia la película"]
-  end
- subgraph Operador["Operador"]
-        C["🧑‍💻 Inicia el sistema"]
-  end
- subgraph camara["Cámara"]
-        CAM1["📷 Captura emociones"]
-  end
- subgraph rasp ["Raspberry Pi 5"]
-        R1["📥 Solicita imagen a cámara"]
-        R2["🧠 Clasificación de emociones"]
-        R3["💾 Guarda emociones + timestamp"]
-        R4["📤 Envía reporte"]
-  end
- subgraph operador_compu["Computador del Operador"]
-        D["📥 Recepción del reporte"]
-        E["📊 Visualización/Análisis de emociones"]
-  end
-    A --> B
-    B --> Operador
-    C --> rasp
-    R1 --> camara
-    CAM1 --> R2
-    R2 --> R3
-    R3 --> R4
-    R4 --> operador_compu
-    D --> E
-```
+<img src="https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/vista_operacional_1.png?raw=true" alt="vista_op1" width="400"/>
+
 
 ## 🧩 Descripción de la vista operacional
 En este punto se presenta una descripción del comportamiento del sistema con el fin de que cualquier persona pueda entender su funcionamiento. Es importante que el modelo defina una perspectiva completamente operacional, sencilla y comprensible para el usuario. Por esta razón, se realiza una representación de alto nivel, en la cual se destacan los componentes principales del sistema y la manera en que se utilizan de forma secuencial para lograr la detección y registro de emociones. Esta representación permite visualizar el flujo de operación desde la llegada del espectador hasta la recopilación final de datos por parte del operador.
@@ -128,35 +98,7 @@ A partir de las funciones que desempeñan el espectador y el operador, es posibl
 
 Cabe destacar que la elección de capturar las imágenes a una tasa de 1 cuadro por segundo (1 fps) se debe a que las emociones de corta duración —que suelen ser las expresiones más comunes al visualizar una película— tienden a mantenerse durante varios segundos. Por ello, este intervalo de captura resulta suficiente para registrar dichas emociones de manera efectiva [15].
 
-```mermaid
-flowchart TD
-
-    subgraph Eventos
-        A[Se sienta en la sala de cine y visualiza la película]
-        B[Inicia la ejecución del sistema]
-        C[Finaliza la ejecución del sistema]
-        D[Analiza los datos del sistema]
-        E[Genera un reporte con datos obtenidos]
-    end
-
-    subgraph Espectador
-        S[Espectador]
-    end
-
-    subgraph Operador
-        O[Operador]
-    end
-
-
-    S --> A
-    O --> B
-    O --> C
-    O --> D
-    O --> E
-
-
-
-```
+![eventos](https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/eventos.png)
 
 ## 🕒 Diagrama de secuencia
 Seguidamente se presenta el diagrama de secuencia del sistema, en el que se consideran cinco elementos principales: el espectador, la cámara, la Raspberry Pi, el operador y el computador del operador. En esta secuencia, el espectador se limita a disfrutar de la película sin intervenir en el proceso. El operador se encarga de inicializar el sistema, lo que activa la interfaz e inicia el programa de detección de emociones. A partir de este punto, la cámara captura imágenes que son procesadas por la Raspberry Pi, donde también se almacenan los archivos generados. Este ciclo se repite de forma continua hasta que el operador decide finalizar la ejecución. Finalmente, los datos son transferidos al computador, donde la interfaz permite visualizar los resultados en formato de texto o gráficos.
@@ -220,20 +162,9 @@ En esta apartado se analizará la interacción de los componentes del sistema y 
 
 # Diagrama de Flujo de Reconocimiento y clasificacion de emociones
 
-```mermaid
-graph TD
-    A[Reacción del Espectador] -->|Captura| B[Cámara USB]
-    B -->|Imagen capturada| C[Raspberry Pi 5]
-    C -->| Preprocesamiento| D[OpenCV]
-    D -->| Inferencia| E[TensorFlow Lite - Edge AI]
-    E -->| Clasificación de Emoción| F[Resultados con timestamp]
-    F -->| Comunicación| G[Envía por Wi-Fi/Ethernet]
-    G -->| Recepción| H[Servidor Central]
-    H -->| Visualización| I[Interfaz Gráfica]
-    I -->|Activación/Desactivación| J[Control de Ciclo]
-    J -->| Retorno al procesamiento| C
 
-```
+<img src="https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/vista_funcional_1.png?raw=true" alt="arqui" width="300"/>
+
 
 ## 📘 Descripción funcional del flujo del sistema
 El sistema comienza con la Cámara USB, que se encarga de la captura de imágenes o video en tiempo real. Estas imágenes se envían directamente a la Raspberry Pi 5, que actúa como el núcleo de procesamiento local.
@@ -300,38 +231,9 @@ El sistema está compuesto por los siguientes bloques funcionales:
 
 ## Diagrama de Arquitectura del Sistema
 
-```mermaid
-flowchart TB
+<img src="https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/arquitectura.png?raw=true" alt="arqui" width="500"/>
 
-    subgraph Camara USB
-        A[Entrada de video o Captura de imágenes]
-    end
 
-    subgraph Raspberry Pi 5
-        B[Preprocesamiento con OpenCV]
-        C[Procesamiento con TFLite]
-        D[Clasificación con Modelo Edge IA]
-        E[Almacenamiento de respuesta local]
-        F[Envío de paquetes vía WiFi o Ethernet]
-    end
-
-    subgraph Servidor Central
-        G[Visualización]
-        H[Interfaz Gráfica]
-        I[Control de Ciclo]
-    end
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> I
-    I --> B
-
-```
 ## 📘 Descripción funcional del flujo del sistema
 El sistema inicia con una cámara USB que captura imágenes en tiempo real, para luego ser enviadas a una Raspberry Pi 5, donde se preprocesan con OpenCV y luego se analizan usando TensorFlow Lite con un modelo de edge IA embebida para reconocimiento emocional. Las emociones detectadas (felicidad, tristeza, enojo, etc.) se guardan con marca temporal y se transmiten por Wi-Fi o Ethernet a un servidor o computador central, donde se visualizan en una interfaz gráfica. Esta interfaz permite el monitoreo en tiempo real.
 
@@ -385,64 +287,8 @@ poky
 
 El diagrama de la arquitectura integrada de software y hardware es: 
 
-```mermaid
-flowchart TB
-    subgraph Espectador
-        P[😃 Reacción del Espectador]
-    end
 
-    subgraph Camara USB
-        A[🎥 Captura de imágenes]
-    end
-
-    subgraph Raspberry Pi 5
-        B[🧠 Preprocesamiento OpenCV]
-        C[🔍 Inferencia con TFLite]
-        D[🏷️ Clasificación con Modelo ]
-        E[💾 Almacenamiento local]
-        F[📡 Envío de datos ]
-
-        subgraph Sistema Yocto
-            Y1[meta-poky]
-            Y2[meta-yocto-bsp]
-            Y3[meta-raspberrypi]
-            Y4[meta-openembedded]
-            Y5[meta-mylayer]
-        end
-    end
-
-    subgraph Servidor Central
-        G[🖥️ Visualización resultados]
-        H[🧩 Interfaz de control]
-        I[🔁 Control de ciclo remoto]
-    end
-
-    subgraph Operador
-        O[👤 Interacción y monitoreo]
-    end
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> I
-    I --> B
-    O --> H
-    P --> A
-
-    %% Colores suaves y distintos para cada capa
-    style Y1 fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
-    style Y2 fill:#fef3c7,stroke:#f59e0b,color:#78350f
-    style Y3 fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
-    style Y4 fill:#dcfce7,stroke:#22c55e,color:#14532d
-    style Y5 fill:#ffe4e6,stroke:#e11d48,color:#881337,font-weight:bold
-
-
-
-```
+<img src="https://github.com/lestorres/Reconocimiento_clasificacion_de_expresiones/blob/main/imag/integracion.png?raw=true" alt="arqui" width="400"/>
 
 
 ## 🧩 Descripción del proceso de integración hardware/software
