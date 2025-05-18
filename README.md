@@ -10,26 +10,24 @@
 ## 🧠 Descripción breve
 Este proyecto propone un sistema embebido en red, instalado en una sala de cine, para detectar emociones en los espectadores mediante Edge AI y Raspberry Pi.
 
-## 📄 Documentación Propuesta
-- [Justificación](docs/justificacion.md)
-- [Problema](docs/problema.md)
-- [Requerimientos](docs/requerimientos.md)
-- [Vista Operacional](docs/vista-operacional.md)
-- [Vista Funcional](docs/vista-funcional.md)
-- [Arquitectura](docs/arquitectura.md)
-- [Dependencias](docs/dependencias.md)
-- [Integración](docs/integracion.md)
-- [Planificación](docs/planificacion.md)
-- [Conclusiones](docs/conclusiones.md)
+## 📄 Documentación 
 
-## 📄 Propuesta de proyecto
+### 📄 Propuesta de proyecto
 - [Propuesta](docs/Informe_Final.md)
+
+## Bitácoras de Roles
+- [Directora](directora.md)
+- [Investigadora](investigadora.md)
+- [Auditor](auditor.md)
+- [Líder Técnico](lider_tecnico.md)
+
 
 ## 🌱 Ramas de trabajo
 - `main`
 - `carolina-propuesta`
 - `lesmes-propuesta`
 - `colab-justificacion`
+- `bitacoras`
 
 ## 🚀 Clonar el repositorio
 
