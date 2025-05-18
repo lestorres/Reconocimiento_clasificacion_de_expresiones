@@ -16,10 +16,10 @@ Este proyecto propone un sistema embebido en red, instalado en una sala de cine,
 - [Propuesta](docs/Informe_Final.md)
 
 ## Bitácoras de Roles
-- [Directora](directora.md)
-- [Investigadora](investigadora.md)
-- [Auditor](auditor.md)
-- [Líder Técnico](lider_tecnico.md)
+- [Directora](bitacoras/directora.md)
+- [Investigadora](bitacoras/investigadora.md)
+- [Auditor](bitacoras/auditor.md)
+- [Líder Técnico](bitacoras/lider_tecnico.md)
 
 
 ## 🌱 Ramas de trabajo
