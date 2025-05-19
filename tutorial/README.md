@@ -1,4 +1,4 @@
-#Tutorial yocto project para Raspberry pi 5
+# Tutorial yocto project para Raspberry pi 5
 
 ## Paso 1.  Crear directorio fuente
 ```bash
