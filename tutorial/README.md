@@ -113,7 +113,7 @@ IMAGE_INSTALL:append = " openssh"
 
 # Paso 7. A cocinar
 ```bash
-bitbake core-image-minimal
+bitbake core-image-base
 ```
 
 # Paso 8. Imagen 
