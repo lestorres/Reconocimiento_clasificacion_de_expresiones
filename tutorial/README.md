@@ -6,18 +6,14 @@ mkdir yocto-rpi5
 cd yocto-rpi5
 ```
 
-## Paso 2. Clonar poky
+## Paso 2. Clonar poky y seleccionar scarthgap
 ```bash
 git clone https://github.com/yoctoproject/poky.git
 cd poky
-```
-
-## Paso 3.  Pasarse al branch scarthgap
-```bash
 git branch -a
 git checkout -t origin/scarthgap -b my-scarthgap
 ```
-## Paso 4. Agregar  meta-layers
+## Paso 3. Agregar  meta-layers
 
 #### Organizacon de los directorio
 ```plaintext
@@ -25,25 +21,34 @@ yocto-rpi5/
 ├── poky/                      ← poky ( branch scarthgap)
 ├── meta-raspberrypi/          ← capa para RPi
 ├── meta-openembedded/         ← capas openembedded
+├── meta-tensorflow/           ← capa tensorflow
 └── build-rpi5/                ← entorno de compilación
 ```
 
 
 
-### Paso 4.1. Agregar meta-raspberrypi layer en el directorio `~/yocto-rpi5`
+### Paso 3.1. Agregar meta-raspberrypi layer en el directorio `~/yocto-rpi5`
 ```bash
 git clone git://git.yoctoproject.org/meta-raspberrypi
 cd meta-raspberrypi
 git checkout scarthgap
 ```
-### Paso 4.2. Agregar meta-openembedded layer
+### Paso 3.2. Agregar meta-openembedded layer
 ```bash
 git clone https://github.com/openembedded/meta-openembedded.git
 cd meta-openembedded
 git checkout scarthgap
 ```
 
-## Paso 5. añadir y mostrar layers
+### Paso 3.3. Agregar meta-tensorflow
+```bash
+git clone https://git.yoctoproject.org/meta-tensorflow
+cd meta-tensorflow
+git checkout scarthgap
+```
+
+
+## Paso 4. Añadir y mostrar layers
 
 ### Iniciar entorno de build
 
@@ -58,6 +63,8 @@ bitbake-layers add-layer ../meta-raspberrypi
 bitbake-layers add-layer ../meta-openembedded/meta-oe
 bitbake-layers add-layer ../meta-openembedded/meta-python
 bitbake-layers add-layer ../meta-openembedded/meta-networking
+bitbake-layers add-layer ../meta-openembedded/meta-multimedia
+bitbake-layers add-layer ../meta-tensorflow
 ```
 
 - Al hacer `bitbake-layers show-layers` se debe desplegar algo como esto:
@@ -73,6 +80,8 @@ raspberrypi           /home/lesme/yocto-rpi5/meta-raspberrypi                   
 openembedded-layer    /home/lesme/yocto-rpi5/meta-openembedded/meta-oe                        5
 meta-python           /home/lesme/yocto-rpi5/meta-openembedded/meta-python                    5
 networking-layer      /home/lesme/yocto-rpi5/meta-openembedded/meta-networking                5
+multimedia-layer      /home/lesme/yocto-rpi5/meta-openembedded/meta-multimedia                5
+meta-tensorflow       /home/lesme/yocto-rpi5/meta-tensorflow                                  10
 ```
 
 
@@ -108,9 +117,9 @@ bitbake core-image-minimal
 ```
 
 # Paso 8. Imagen 
-
+```bash
 bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../core-image-minimal-raspberrypi5.rootfs-20250519232619.wic
-
+```bash
 
 
 
