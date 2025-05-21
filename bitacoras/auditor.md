@@ -91,7 +91,7 @@
         - Aparece un error en la primera corrida del bitbake
             
 
-
+```plaintext
 Error de conflicto de paquetes (SOLUCIONADO)
 
 Durante la construcción de core-image-minimal, ocurrió un conflicto entre dos paquetes:
@@ -104,7 +104,7 @@ El sistema no puede instalar ambos (dropbear y openssh) al mismo tiempo debido a
 
 
 Solución, usar el paquete SSH para protocolo de comunicación
-
+```
 
 
  
@@ -112,9 +112,9 @@ Solución, usar el paquete SSH para protocolo de comunicación
     - Actividad 1: 
 
         - Error de image-core-minimal (SOLUCIONADO)
-
+```plaintext
 Se presenta un error en donde al usar el Raspberry imager, se flasheaba la SD pero al conectarlo con las raspberry en físico, esta imagen no contaba con el bootloader bien instalado.
-
+```
 **Solución** :  Cocinar image-core-base con las mismas capas de la minimal, se aprendió a cambiar la extensión .wic a -img para que el imager detectara la imagen y flasear correctamente a la raspberry pi. Se usaron las referencias [1] y [2]  como guía.
 
 
