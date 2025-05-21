@@ -119,7 +119,7 @@ bitbake core-image-base
 # Paso 8. Imagen 
 ```bash
 bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../core-image-minimal-raspberrypi5.rootfs-20250519232619.wic
-```bash
+```
 
 
 
