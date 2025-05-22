@@ -1,4 +1,4 @@
-#Tutorial yocto project para Raspberry pi 5
+# Tutorial yocto project para Raspberry pi 5
 
 ## Paso 1.  Crear directorio fuente
 ```bash
@@ -143,11 +143,6 @@ Para descomprimir la imagen generada:
 ```bash
 bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../core-image-minimal-raspberrypi5.rootfs-20250519232619.wic
 ```
-
-
-
-
-
 
 # TARGET
 
