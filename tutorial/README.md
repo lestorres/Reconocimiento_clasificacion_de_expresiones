@@ -22,6 +22,7 @@ yocto-rpi5/
 ├── meta-raspberrypi/          ← capa para RPi
 ├── meta-openembedded/         ← capas openembedded
 ├── meta-tensorflow/           ← capa tensorflow
+├── meta-mylayer   /           ← capa my-layer
 └── build-rpi5/                ← entorno de compilación
 ```
 
@@ -47,6 +48,25 @@ cd meta-tensorflow
 git checkout scarthgap
 ```
 
+### Paso 3.4. Agregar meta-mylayer
+
+```bash
+cd ~/yocto-rpi5
+bitbake-layers create-layer meta-mylayer
+```
+
+Quedará de esta forma, 
+
+```bash
+	
+meta-mylayer/
+├── conf/
+│   └── layer.conf
+└── README
+```
+
+Sobre el directorio meta-mylayer se debe copiar la capa "meta-mylayer" del repositorio de git. 
+
 
 ## Paso 4. Añadir y mostrar layers
 
@@ -65,6 +85,7 @@ bitbake-layers add-layer ../meta-openembedded/meta-python
 bitbake-layers add-layer ../meta-openembedded/meta-networking
 bitbake-layers add-layer ../meta-openembedded/meta-multimedia
 bitbake-layers add-layer ../meta-tensorflow
+bitbake-layers add-layer ../meta-mylayer
 ```
 
 - Al hacer `bitbake-layers show-layers` se debe desplegar algo como esto:
@@ -113,13 +134,18 @@ IMAGE_INSTALL:append = " openssh"
 
 # Paso 7. A cocinar
 ```bash
-bitbake core-image-minimal
+bitbake core-image-base
 ```
 
 # Paso 8. Imagen 
+
+Para descomprimir la imagen generada:
 ```bash
 bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../core-image-minimal-raspberrypi5.rootfs-20250519232619.wic
-```bash
+```
+
+
+
 
 
 
@@ -166,6 +192,11 @@ bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../cor
 
 
 
+
+# Interacciones
+
+- Ver dispositivos conectados
+	> v4l2-ctl --list-devices
 
 
 # REFERENCIAS
