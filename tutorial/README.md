@@ -10,19 +10,18 @@ cd yocto-rpi5
 ```bash
 git clone https://github.com/yoctoproject/poky.git
 cd poky
-git branch -a
-git checkout -t origin/scarthgap -b my-scarthgap
+git checkout -b kirkstone origin/kirkstone
 ```
 ## Paso 3. Agregar  meta-layers
 
 #### Organizacon de los directorio
 ```plaintext
 yocto-rpi5/
-├── poky/                      ← poky ( branch scarthgap)
+├── poky/                      ← poky (branch kirkstone)
 ├── meta-raspberrypi/          ← capa para RPi
 ├── meta-openembedded/         ← capas openembedded
 ├── meta-tensorflow/           ← capa tensorflow
-├── meta-mylayer   /           ← capa my-layer
+├── meta-mylayer/              ← capa personalizada
 └── build-rpi5/                ← entorno de compilación
 ```
 
@@ -32,20 +31,20 @@ yocto-rpi5/
 ```bash
 git clone git://git.yoctoproject.org/meta-raspberrypi
 cd meta-raspberrypi
-git checkout scarthgap
+git checkout kirkstone
 ```
 ### Paso 3.2. Agregar meta-openembedded layer
 ```bash
 git clone https://github.com/openembedded/meta-openembedded.git
 cd meta-openembedded
-git checkout scarthgap
+git checkout kirkstone
 ```
 
 ### Paso 3.3. Agregar meta-tensorflow
 ```bash
 git clone https://git.yoctoproject.org/meta-tensorflow
 cd meta-tensorflow
-git checkout scarthgap
+git checkout kirkstone
 ```
 
 ### Paso 3.4. Agregar meta-mylayer
@@ -123,11 +122,31 @@ nano conf/local.conf
 BB_NUMBER_THREADS = "8"
 PARALLEL_MAKE = "-j8"
 
-#-------------------------------0----------------------------------
+#--------------------------------0----------------------------------
+
 MACHINE = "raspberrypi5"
 INIT_MANAGER = "systemd"
-LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
-IMAGE_INSTALL:append = " openssh"
+LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch commercial"
+
+DISTRO_FEATURES += "ssh"
+
+SYSTEMD_AUTO_ENABLE = "1"
+
+SYSTEMD_SERVICE:append = " sshd.service"
+
+#Paquetes
+IMAGE_INSTALL:append = " \
+  openssh \
+  v4l-utils \
+  opencv \
+  python3 \
+  python3-numpy \
+  python3-requests \
+  python3-opencv \
+  tensorflow-lite \
+  vim \
+  myapp \
+"
 
 ```
 
@@ -197,4 +216,5 @@ bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../cor
 # REFERENCIAS
 
 [1] https://eclipse.dev/kanto/docs/how-to-guides/build-yocto-image-raspberry-pi/
+
 [2] https://anavi.org/article/298/
