@@ -6,7 +6,7 @@ mkdir yocto-rpi5
 cd yocto-rpi5
 ```
 
-## Paso 2. Clonar poky y seleccionar scarthgap
+## Paso 2. Clonar poky y seleccionar kirkstone
 ```bash
 git clone https://github.com/yoctoproject/poky.git
 cd poky
