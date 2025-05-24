@@ -132,8 +132,6 @@ DISTRO_FEATURES += "ssh"
 
 SYSTEMD_AUTO_ENABLE = "1"
 
-SYSTEMD_SERVICE:append = " sshd.service"
-
 #Paquetes
 IMAGE_INSTALL:append = " \
   openssh \
