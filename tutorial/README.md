@@ -144,6 +144,61 @@ Para descomprimir la imagen generada:
 bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../core-image-minimal-raspberrypi5.rootfs-20250519232619.wic
 ```
 
+# Paso 9. Conectar por ssh
+
+PC Linux:
+
+```bash
+sudo ip addr add 192.168.100.1/24 dev eth0
+sudo ip link set eth0 up
+```
+
+Raspberry Pi 5
+
+```bash
+
+sudo ip addr add 192.168.100.2/24 dev eth0
+sudo ip link set eth0 up
+
+```
+
+
+## 9.1. Probar conexión con ping
+
+
+
+Desde la PC Linux:
+
+```bash
+ping 192.168.100.2  # Raspberry
+```
+
+Desde la Raspberry Pi 5
+
+```bash
+ping 192.168.100.1  # PC Debian
+
+```
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # TARGET
 
 ### Camara Logitech Webcam C170 - Especificaciones Técnicas
@@ -197,4 +252,5 @@ bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../cor
 # REFERENCIAS
 
 [1] https://eclipse.dev/kanto/docs/how-to-guides/build-yocto-image-raspberry-pi/
+
 [2] https://anavi.org/article/298/
