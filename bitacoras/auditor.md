@@ -150,8 +150,24 @@ Se presenta un error en donde al usar el Raspberry imager, se flasheaba la SD pe
         - Actualización de bitácora de auditor.
 
 
+### Sesión 13: Fecha - 21 de Mayo de 2025
+
+
+https://github.com/vicksam/fer-model#
+
+
+### Sesión 14: Fecha - 22 de Mayo de 2025
+
+
+### Sesión 15: Fecha - 23 de Mayo de 2025
 
 
 
+### Sesión 16: Fecha - 24 de Mayo de 2025
 
 
+### Sesión 17: Fecha - 25 de Mayo de 2025
+
+### Sesión 18: Fecha - 26 de Mayo de 2025
+    -Actividad 1 :
+        - Entrega de la demostración del proyecto
