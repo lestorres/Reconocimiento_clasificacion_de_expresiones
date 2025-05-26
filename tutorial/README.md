@@ -66,6 +66,31 @@ meta-mylayer/
 
 Sobre el directorio meta-mylayer se debe copiar la capa "meta-mylayer" del repositorio de git. 
 
+Final las rutas deben tener los siguientes directorios>
+
+```bash
+yocto-rpi5/
+├── build-rpi5/
+│   ├── bazel/
+│   ├── bitbake-cookerdaemon.log
+│   ├── cache/
+│   ├── conf/
+│   ├── downloads/
+│   ├── sstate-cache/
+│   └── tmp/
+├── meta-mylayer/
+│   ├── conf/
+│   │   └── layer.conf
+│   ├── COPYING.MIT
+│   ├── README
+│   └── recipes-mylayer/
+├── meta-openembedded/
+├── meta-raspberrypi/
+├── meta-tensorflow/
+├── models/
+└── poky/
+```
+
 
 ## Paso 4. Añadir y mostrar layers
 
@@ -197,24 +222,42 @@ ping 192.168.100.1  # PC Debian
 
 ```
 
-
+# Paso 10. Conexión con ssh de Monitor a Cine (Raspberry Pi)
  
 
+## Desde la PC Linux:
 
 
+Definir ip linux:
+
+```bash
+sudo ./ip-set.sh
+```
+Conectar con Cine (Raspberry)
+
+```bash
+ssh cine@192.168.100.2  # Raspberry
+```
+
+## Desde la Raspberry:
+
+Archivo desde `/usr/bin/myapp`.
+
+```bash
+python3 captura.py
+```
+
+# Paso 11. Interfaz
+ 
+
+## Desde la PC Linux:
 
 
+Abrir la interfaz y cargar datos del modelo
 
-
-
-
-
-
-
-
-
-
-
+```bash
+python3 interfaz.py
+```
 
 # TARGET
 
@@ -258,11 +301,9 @@ ping 192.168.100.1  # PC Debian
 | **Dimensiones**              | 85.6 mm × 56.5 mm × 18 mm                                               |
 
 
-
-
 # Interacciones
 
-- Ver dispositivos conectados
+- Ver dispositivos conectados (cámara Usb)
 	> v4l2-ctl --list-devices
 
 
