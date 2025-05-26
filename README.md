@@ -22,7 +22,7 @@ Este proyecto propone un sistema embebido en red, instalado en una sala de cine,
 - [Líder Técnico](bitacoras/lider_tecnico.md)
 
 ## Demotración
-- [Demostración de funcionalidad](demo.md)
+- [Demostración de funcionalidad](docs/demo.md)
 
 
 ## 🌱 Ramas de trabajo
