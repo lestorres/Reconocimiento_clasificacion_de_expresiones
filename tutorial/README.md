@@ -66,6 +66,31 @@ meta-mylayer/
 
 Sobre el directorio meta-mylayer se debe copiar la capa "meta-mylayer" del repositorio de git. 
 
+Final las rutas deben tener los siguientes directorios>
+
+```bash
+yocto-rpi5/
+├── build-rpi5/
+│   ├── bazel/
+│   ├── bitbake-cookerdaemon.log
+│   ├── cache/
+│   ├── conf/
+│   ├── downloads/
+│   ├── sstate-cache/
+│   └── tmp/
+├── meta-mylayer/
+│   ├── conf/
+│   │   └── layer.conf
+│   ├── COPYING.MIT
+│   ├── README
+│   └── recipes-mylayer/
+├── meta-openembedded/
+├── meta-raspberrypi/
+├── meta-tensorflow/
+├── models/
+└── poky/
+```
+
 
 ## Paso 4. Añadir y mostrar layers
 
