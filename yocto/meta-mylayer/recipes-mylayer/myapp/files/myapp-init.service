@@ -1,0 +1,12 @@
+[Unit]
+Description=Inicialización de red y SSH para myapp
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/myapp/set-ip.sh
+ExecStartPost=/usr/bin/myapp/set-ssh.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
