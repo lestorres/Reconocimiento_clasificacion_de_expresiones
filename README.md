@@ -24,11 +24,44 @@ Este proyecto propone un sistema embebido en red, instalado en una sala de cine,
 ## Demotración Final
 - [Demostración de funcionalidad](docs/demostracion.md)
 
+- [Detalles de Hardware](yocto/README.md)
+
+- [Detalles de la Interfaz](interfaz/README.md)
 
 ## 🌱 Ramas de trabajo
 - `main`
 - `yocto`
 - `bitacoras`
+
+## Directorios del Repositorio
+El Repotorio cuenta con los siguientes directorios>
+
+```bash
+Reconocimiento_clasificacion_de_expresiones/
+├── bitacoras/		--> Bitácoras
+├── docs/		--> Documentacion del proyecto
+├── imag/		--> Imágenes utilizas
+├── interfaz/		--> Detalles de la interfaz de Usuario  
+│   ├── interfaz_completa.py
+│   ├── ip-set.sh
+│   ├── README.md
+│   └── ventana_ui.py
+├── yocto/		--> Detalles de Hardware e imagen de yocto
+│   ├── conf/
+│   ├── meta-mylayer/
+│   │   └── recipes-mylayer/
+│   │       └── myapp/
+│   │           ├── captura.py
+│   │           ├── cliente.py
+│   │           ├── myapp_1_0.bb
+│   │           ├── myapp-init.service
+│   │           ├── set-ip.sh
+│   │           └── set-ssh.sh
+│   └── README.md
+├── LICENSE
+└── README.md
+
+````
 
 ## 🚀 Clonar el repositorio
 
