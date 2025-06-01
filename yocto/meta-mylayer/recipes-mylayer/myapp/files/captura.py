@@ -17,7 +17,7 @@ EMOCIONES = ['neutral', 'happy', 'sad', 'surprise', 'anger']
 ARCHIVO_LOCAL = "/usr/bin/myapp/emociones.csv"
 USUARIO_PC = "lesmes"
 IP_PC = "192.168.100.1"
-RUTA_DESTINO_PC = "/home/lesmes/Desktop/emociones_video.csv"
+RUTA_DESTINO_PC = "/home/lesmes/Desktop/emociones.csv"
 MODELO_TFLITE = "/usr/bin/myapp/model/ferplus_model_pd_best.tflite"
 
 # Inicializar modelo

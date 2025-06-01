@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ventana.ui'
+# Form implementation generated from reading ui file 'ventana_final.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -14,22 +14,30 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 300)
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setGeometry(QtCore.QRect(30, 240, 341, 32))
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
+        Dialog.resize(400, 294)
+        Dialog.setStyleSheet("background-color: lightblue;")
         self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(230, 70, 101, 41))
+        self.pushButton.setGeometry(QtCore.QRect(240, 130, 101, 41))
+        self.pushButton.setStyleSheet("background-color: orange;")
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_2.setGeometry(QtCore.QRect(70, 70, 101, 41))
+        self.pushButton_2.setGeometry(QtCore.QRect(70, 130, 101, 41))
+        self.pushButton_2.setStyleSheet("background-color: orange;")
         self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_3 = QtWidgets.QPushButton(Dialog)
+        self.pushButton_3.setGeometry(QtCore.QRect(70, 50, 101, 41))
+        self.pushButton_3.setStyleSheet("background-color: green;")
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_4 = QtWidgets.QPushButton(Dialog)
+        self.pushButton_4.setGeometry(QtCore.QRect(240, 50, 101, 41))
+        self.pushButton_4.setStyleSheet("background-color: red;")
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.pushButton_5 = QtWidgets.QPushButton(Dialog)
+        self.pushButton_5.setGeometry(QtCore.QRect(150, 210, 101, 41))
+        self.pushButton_5.setStyleSheet("background-color: lightgray;")
+        self.pushButton_5.setObjectName("pushButton_5")
 
         self.retranslateUi(Dialog)
-        self.buttonBox.accepted.connect(Dialog.accept) # type: ignore
-        self.buttonBox.rejected.connect(Dialog.reject) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -37,3 +45,6 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.pushButton.setText(_translate("Dialog", "Graficar"))
         self.pushButton_2.setText(_translate("Dialog", "Cargar csv"))
+        self.pushButton_3.setText(_translate("Dialog", "Play"))
+        self.pushButton_4.setText(_translate("Dialog", "Stop"))
+        self.pushButton_5.setText(_translate("Dialog", "Calibración"))

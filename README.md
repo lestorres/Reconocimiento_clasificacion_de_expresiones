@@ -21,14 +21,12 @@ Este proyecto propone un sistema embebido en red, instalado en una sala de cine,
 - [Auditor](bitacoras/auditor.md)
 - [Líder Técnico](bitacoras/lider_tecnico.md)
 
-## Demotración
-- [Demostración de funcionalidad](docs/demo.md)
+## Demotración Final
+- [Demostración de funcionalidad](docs/demostracion.md)
 
 
 ## 🌱 Ramas de trabajo
 - `main`
-- `carolina-propuesta`
-- `lesmes-propuesta`
 - `yocto`
 - `bitacoras`
 
