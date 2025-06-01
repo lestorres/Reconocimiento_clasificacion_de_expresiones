@@ -106,9 +106,7 @@ meta-mylayer/
 └── README
 ```
 
-Sobre el directorio meta-mylayer se debe copiar la capa "meta-mylayer" del repositorio de git. 
-
-Final las rutas deben tener los siguientes directorios>
+Sobre el directorio meta-mylayer se debe copiar la capa "meta-mylayer" del repositorio de git.  Al final las rutas deben tener los siguientes directorios:
 
 ```bash
 yocto-rpi5/
@@ -212,9 +210,7 @@ IMAGE_INSTALL:append = " \
   vim \
   myapp \
 "
-
 ```
-
 
 # Paso 7. A cocinar!
 
@@ -230,6 +226,7 @@ Para descomprimir la imagen generada:
 ```bash
 bzip2 -dc core-image-minimal-raspberrypi5.rootfs-20250519232619.wic.bz2 > ../core-image-minimal-raspberrypi5.rootfs-20250519232619.wic
 ```
+Mediante la aplicación de Raspberry Pi Imager, se seleciona el modelo y la imagen descomprimida para flashear la tarjeta SD.
 
 # Paso 9. Configuración Inicial (Primer Arranque)
 
@@ -275,6 +272,11 @@ También se pueden hacer las interacciones de:
 
 - Ver dispositivos conectados (cámara Usb)
 	> v4l2-ctl --list-devices
+ 
+
+Al final se busca obtener una arquitectura como esta:
+
+<img src="../imag/arquitectura2.png?raw=true" alt="arqui" width="500"/>
 
 # Paso 10. Interfaz
 
