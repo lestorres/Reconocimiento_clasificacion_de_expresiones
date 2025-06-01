@@ -280,7 +280,7 @@ Al final se busca obtener una arquitectura como esta:
 
 # Paso 10. Interfaz
 
- ## Desde la PC Linux:
+Desde la PC Linux:
 
 Abrir el archivo interfaz_completa.py e interactuar con el modelo.
 
@@ -289,11 +289,10 @@ python3 interfaz_completa.py
 ```
 
 
-
 # REFERENCIAS
 
-[1] Eclipse Foundation, "How to Build a Yocto Image for Raspberry Pi," Eclipse Kanto Documentation. [Online]. Available: https://eclipse.dev/kanto/docs/how-to-guides/build-yocto-image-raspberry-pi/. [Accessed: 31-May-2025].
+[1] Eclipse Foundation, "How to Build a Yocto Image for Raspberry Pi," Eclipse Kanto Documentation. [Online]. Available: https://eclipse.dev/kanto/docs/how-to-guides/build-yocto-image-raspberry-pi/.
 
-[2] T. Stoev, "Running TensorFlow Lite image classification on Raspberry Pi with ANAVI Infrared pHAT," ANAVI Technology Blog, Aug. 2021. [Online]. Available: https://anavi.org/article/298/. [Accessed: 31-May-2025].
+[2] T. Stoev, "Running TensorFlow Lite image classification on Raspberry Pi with ANAVI Infrared pHAT," ANAVI Technology Blog, Aug. 2021. [Online]. Available: https://anavi.org/article/298/. 
 
-[3] vicksam, fer-model: Facial expression recognition using Keras and OpenCV, GitHub repository. [Online]. Available: https://github.com/vicksam/fer-model. [Accessed: 31-May-2025].
+[3] vicksam, fer-model: Facial expression recognition using Keras and OpenCV, GitHub repository. [Online]. Available: https://github.com/vicksam/fer-model. 
