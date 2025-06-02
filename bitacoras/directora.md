@@ -28,6 +28,25 @@ Actividades realizadas:
 Referencias consultadas:
 - https://omes-va.com/deteccion-de-rostros-con-haar-cascades-python-opencv/ 
 
-### Sesión 5: Fecha - 21 de Mayo de 2025
+### Sesión 5: Fecha - 16 de Mayo de 2025
 Actividades realizadas:
 - Coordinación para la entrega de bitácoras.
+
+### Sesión 6: Fecha - 18 de Mayo de 2025
+Actividades realizadas:  
+- Reunión con el equipo para priorizar mejoras en la interfaz gráfica (usabilidad y diseño).
+
+### Sesión 7: Fecha - 20 de Mayo de 2025
+Actividades realizadas: 
+- Reunión técnica: integración de la interfaz gráfica con la comunicación SSH.
+- Validación de flujos de datos entre Raspberry Pi y el sistema central.
+
+### Sesión 8: Fecha - 22 de Mayo de 2025
+Actividades realizadas: 
+- Pruebas de transmisión de video en tiempo real via SSH.
+- Se determinó que la implementación es inviable por complejidad técnica y limitaciones de hardware.
+
+### Sesión 9: Fecha - 24 de Mayo de 2025
+Actividades realizadas: 
+- Verificación final de todas las partes del proyecto (interfaz, detección de emociones, SSH y documentación).  
+- Pruebas integrales para garantizar el funcionamiento conjunto del sistema.
