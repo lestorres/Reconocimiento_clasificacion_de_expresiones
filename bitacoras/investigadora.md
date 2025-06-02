@@ -26,7 +26,14 @@ Referencias consultadas:
 - https://www.instructables.com/Raspberry-Pi-Based-Emotion-Recognition-System/
 - https://gsyc.urjc.es/jmvega/teaching/tfgs/2021-22_JavierMartinez.pdf 
 
-### Sesión 4: Fecha - 17 de Mayo de 2025
+### Sesión 4: Fecha - 16 de Mayo de 2025  
+Actividades realizadas:  
+- Investigación del modelo de detección de emociones (TensorFlow Lite + OpenCV en Raspberry Pi).  
+
+Referencias consultadas:  
+- https://www.toolify.ai/es/ai-news-es/deteccin-de-objetos-y-reconocimiento-de-imgenes-con-tensorflow-lite-y-opencv-en-raspberry-pi-2050899
+
+### Sesión 5: Fecha - 17 de Mayo de 2025
 Actividades realizadas:
 - Investigación sobre comunicación SSH entre Raspberry Pi 4 y computadora.
 - Investigación de ajustes de parámetros o preprocesamiento adicional de imágenes.  
@@ -34,7 +41,22 @@ Actividades realizadas:
 Referencias consultadas:
 - https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html
 
-### Sesión 5: Fecha - 21 de Mayo de 2025
+### Sesión 6: Fecha - 18 de Mayo de 2025
+Actividades realizadas:  
+- Investigación sobre transmisión de video en tiempo real via SSH (evaluación de factibilidad).  
+- *Conclusión:* Se determinó que la implementación es muy compleja para el alcance del proyecto.  
+
+Referencias consultadas:  
+- https://medium.com/@happynehra/ultimate-guide-to-live-video-streaming-on-a-remote-computer-via-ssh-7c11d86ec5db
+
+### Sesión 7: Fecha - 19 de Mayo de 2025
+Actividades realizadas:  
+- Investigación sobre cómo ejecutar comandos SSH mediante Python usando la librería subprocess.  
+
+Referencias consultadas:  
+- https://www.digitaldesignjournal.com/multiple-commands-with-ssh-using-python-subprocess/
+
+### Sesión 8: Fecha - 21 de Mayo de 2025
 Actividades realizadas:
 - Investigación de interfaces gráficas con QT.
 - Investigación de interfaces gráficas con Tkinter.
